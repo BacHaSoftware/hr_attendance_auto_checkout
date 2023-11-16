@@ -3,7 +3,7 @@
 
 {
     'name': 'BHS Attendance Auto Checkout',
-    'version': '16.0',
+    'version': '17.0.1.2',
     'category': 'Human Resources',
     'sequence': 335,
     "summary": "Automatically check out if employee forgets to check out",
