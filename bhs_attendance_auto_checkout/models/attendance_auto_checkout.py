@@ -7,15 +7,17 @@ import pytz
 class ResConfigSettings(models.TransientModel):
 
     _inherit = 'res.config.settings'
+    hr_attendance_start_time = fields.Char(string="Start Time", readonly=False)
     hr_attendance_end_time = fields.Char(string="End Time", readonly=False)
 
     @api.model
     def get_values(self):
         res = super(ResConfigSettings, self).get_values()
-        hr_attendance_end_time = self.env.ref('bhs_hr_attendance_auto_checkout.ir_cron_data_checkout').nextcall.\
-            astimezone(pytz.timezone(self.env.user.employee_id.tz)).replace(tzinfo=None).time()
-
+        hr_attendance_start_time = self.env['ir.config_parameter'].sudo().get_param('hr_attendance_start_time') or False
+        hr_attendance_end_time = self.env.ref('bhs_attendance_auto_checkout.ir_cron_data_checkout').nextcall.astimezone(
+            pytz.timezone(self.env.user.employee_id.tz or 'UTC')).replace(tzinfo=None).time()
         res.update({
+            'hr_attendance_start_time': hr_attendance_start_time,
             'hr_attendance_end_time': hr_attendance_end_time,
         })
 
@@ -35,9 +37,10 @@ class ResConfigSettings(models.TransientModel):
             time_check_out = time_check_out + timedelta(days=1)
         else:
             time_check_out = time_check_out
-        self.env.ref('bhs_hr_attendance_auto_checkout.ir_cron_data_checkout').write({
+        self.env.ref('bhs_attendance_auto_checkout.ir_cron_data_checkout').write({
             'nextcall': utc_dt(time_check_out),
         })
+        self.env['ir.config_parameter'].sudo().set_param("hr_attendance_start_time", self.hr_attendance_start_time)
 
 
 class BHHrAttendance(models.Model):
@@ -46,7 +49,10 @@ class BHHrAttendance(models.Model):
     # Auto Check Out
     @api.model
     def auto_checkout(self):
-        attendances = self.sudo().search([('check_out', '=', None)])
-        attendances.write({
+        try:
+            attendances = self.sudo().search([('check_out', '=', None)])
+            attendances.write({
                 'check_out': fields.Datetime.now(),
             })
+        except:
+            pass

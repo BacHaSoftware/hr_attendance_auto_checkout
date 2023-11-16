@@ -2,12 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'BH_HR_ATTENDANCE_AUTO_CHECKOUT',
-    'version': '1.0',
+    'name': 'BHS Attendance Auto Checkout',
+    'version': '16.0',
     'category': 'Human Resources',
     'sequence': 335,
+    "summary": "Automatically check out if employee forgets to check out",
     'description': """
-        Automaticaly check out by time admin configure
+        Automatically check out if employee forgets to check out
     """,
     'website': 'https://www.odoo.com/app/employees',
     'depends': ['hr_attendance'],
@@ -16,7 +17,7 @@
         'data/attendance_data.xml',
     ],
     'license': 'LGPL-3',
-    'images': ['static/description/banner.gif'],
+    'images': ['static/description/banner.png'],
     # Author
     'author': 'Bac Ha Software',
     'website': 'https://bachasoftware.com',
