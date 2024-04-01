@@ -12,7 +12,7 @@ class ResConfigSettings(models.TransientModel):
     @api.model
     def get_values(self):
         res = super(ResConfigSettings, self).get_values()
-        hr_attendance_end_time = self.env.ref('bhs_hr_attendance_auto_checkout.ir_cron_data_checkout').nextcall.\
+        hr_attendance_end_time = self.env.ref('bhs_attendance_auto_checkout.ir_cron_data_checkout').nextcall.\
             astimezone(pytz.timezone(self.env.user.employee_id.tz)).replace(tzinfo=None).time()
 
         res.update({
