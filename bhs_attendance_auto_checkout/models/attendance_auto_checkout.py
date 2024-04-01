@@ -35,7 +35,7 @@ class ResConfigSettings(models.TransientModel):
             time_check_out = time_check_out + timedelta(days=1)
         else:
             time_check_out = time_check_out
-        self.env.ref('bhs_hr_attendance_auto_checkout.ir_cron_data_checkout').write({
+        self.env.ref('bhs_attendance_auto_checkout.ir_cron_data_checkout').write({
             'nextcall': utc_dt(time_check_out),
         })
 
