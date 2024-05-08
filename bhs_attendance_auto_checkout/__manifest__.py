@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'BHS Attendance Auto Checkout',
-    'version': '17.0.1.2',
+    'name': 'Attendance Auto Checkout',
+    'version': '17.0',
     'category': 'Human Resources',
     'sequence': 335,
     "summary": "Automatically check out if employee forgets to check out",
