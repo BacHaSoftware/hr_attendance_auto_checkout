@@ -17,7 +17,7 @@
         'data/attendance_data.xml',
     ],
     'license': 'LGPL-3',
-    'images': ['static/description/banner.png'],
+    'images': ['static/description/banner.gif'],
     # Author
     'author': 'Bac Ha Software',
     'website': 'https://bachasoftware.com',
