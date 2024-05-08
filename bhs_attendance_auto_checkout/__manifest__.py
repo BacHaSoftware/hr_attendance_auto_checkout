@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'BHSoft attendance auto checkout',
-    'version': '1.0',
+    'name': 'attendance auto checkout',
+    'version': '15.0',
     'category': 'Human Resources',
     'sequence': 335,
     'description': """
