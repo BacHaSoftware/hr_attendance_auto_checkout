@@ -8,11 +8,11 @@
     <img src="/bhs_attendance_auto_checkout/static/description/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Password Policy</h3>
+  <h3 align="center">Attendance Auto Checkout</h3>
 
   <p align="center">
-    Strengthen your Odoo system with our Password Security module, ideal for all industries. Set up strong password policies quickly and easily to keep your data safe.
-    <br />
+    A product of Bac Ha Software allows to automatically check out if employees forget to check out.
+<br />
   </p>
 </div>
 
@@ -45,30 +45,22 @@
 
 <div align="left">
   <a href="https://github.com/BacHaSoftware/hr_attendance_auto_checkout">
-    <img src="/bhs_attendance_auto_checkout/static/description/imgs/screen/setting.png" alt="Setting">
+    <img src="/bhs_attendance_auto_checkout/static/description/imgs/screen/setting.PNG" alt="Setting">
   </a>
 </div>
 
 #### Key Features:
 
-🌟 <code>Feature Section</code>: Automatically prompts users to update their passwords every 90 days, enhancing security measures and minimizing vulnerability risks.
+🌟 <code>Schedule Action</code>: When schedule action run, employees will be checked out. You can edit this schedule action to suit your organisation.
 
-🌟 <code>Customizable Password Policies</code>: Set specific requirements for password complexity, including length, lowercase and uppercase letters, numbers, and special characters, to fortify your system against unauthorized access.
+🌟 <code>Automatically Checkout</code>: Employees will be automatically checked out if they haven't checked out before. Time check out can be configured in Attendances Settings
 
-🌟 <code>Comprehensive Configuration</code>: Easily configure password policies through General Settings, allowing for quick adjustments tailored to your company’s needs.
-
-🌟 <code>Enforced Password Complexity</code>: Ensures all user passwords meet predefined criteria at their next change, bolstering your system’s defense.
-
-🌟 <code>Send Mail Notification</code>: Send password expiration notification by email 3 days (can be configured) before expiration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 <!-- PREREQUISTES
 ### Prerequisites
@@ -81,26 +73,18 @@ This module needs the Python library pandas, otherwise it cannot be installed an
 ### Installation
 
 1. Install module  <code>bhs_password_policy</code>
-2. In <code>Setting</code>, go to the <code>Password Policy</code> then configuration section
-Configure your desired password rules based on the given parameters
+2. In <code>Setting</code>, go to the <code>Auto Checkout Configuration</code> then configure work start time and work end time
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Strengthen your Odoo system with our Password Policy module, ideal for all industries. Set up strong password policies quickly and easily to keep your data safe.
+Feature allows to automatically check out if employees forget to check out.
 
 #### Featured Highlight:
 
-🌟 <code>Strong Password Requirements</code>: Ensure passwords include uppercase, lowercase, numbers, and special characters.
-
-🌟 <code>Automatic Password Updates</code>: Set passwords to automatically expire, prompting users to change them regularly.
-
-🌟 <code>Simple Setup</code>: Adjust settings directly from the General Settings menu, applying strong password policies across your organization effortlessly.
-
-🌟 <code>Prevent Password Reuse</code>: Stop the reuse of old passwords and set time limits on how often passwords can be changed to enhance security.
-
+🌟 <code>Easy To Use</code>: Adjust settings directly from the General Settings menu, applying auto check out for your organization effortlessly.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
