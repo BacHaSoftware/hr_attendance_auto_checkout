@@ -3,7 +3,7 @@
 
 {
     'name': 'Attendance Auto Checkout',
-    'version': '17.0',
+    'version': '1.0',
     'category': 'Human Resources',
     'sequence': 335,
     "summary": "Automatically check out if employee forgets to check out",
