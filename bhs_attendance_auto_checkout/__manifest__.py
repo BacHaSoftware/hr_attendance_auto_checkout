@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'attendance auto checkout',
+    'name': 'Attendance Auto Checkout',
     'version': '15.0',
     'category': 'Human Resources',
     'sequence': 335,
@@ -16,7 +16,7 @@
         'data/attendance_data.xml',
     ],
     'license': 'LGPL-3',
-    'images': ['static/description/banner.gif'],
+    'images': ['static/description/banner.png'],
     # Author
     'author': 'Bac Ha Software',
     'website': 'https://bachasoftware.com',
